@@ -1,0 +1,27 @@
+.allOrderTableDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.allOrderTableDiv table{
+    margin-top: 10px;
+    width: 80%;
+}
+
+.allOrderTableDiv table tr th{
+    background-color: brown;
+    color: white;
+    padding: 10px;
+}
+
+.allOrderTableDiv table tr td{
+    background-color: rgb(255, 241, 241);
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.allOrderTableDiv table tr td a i{
+    margin: 0 10px;
+}

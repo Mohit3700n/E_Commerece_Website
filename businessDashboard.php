@@ -128,6 +128,13 @@
                 echo count($result);
                 ?></span>
             </div>
+            <?php
+                $user_id = $_SESSION['user_id'];
+                $command = escapeshellcmd("python sales_graph.py " . $user_id);
+                $output = shell_exec($command);
+                echo "<p>$output</p>";
+                echo '<img src="sales_graph.png" alt="Sales Graph" />';
+            ?>
         </div>
     </div>
 </body>

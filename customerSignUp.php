@@ -99,6 +99,8 @@ try {
 </head>
 
 <body>
+    <div class="blurBox">
+    </div>
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <?php
         if (in_array($fill_all_fields, $error_msg))

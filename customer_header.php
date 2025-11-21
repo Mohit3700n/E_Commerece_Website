@@ -33,7 +33,8 @@ handle_logout();
     <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
             <div class="flex-shrink-0">
-                <a href="index.php" class="text-2xl font-bold text-gray-800">YourBrand</a>
+                
+                <a href="index.php" class="text-2xl font-bold text-gray-800"><img src="images/logo.png" width="90px" alt="Logo"></a>
             </div>
 
             <div class="hidden md:flex md:items-center md:mx-auto md:space-x-8">

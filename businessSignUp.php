@@ -75,12 +75,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['businessSignup'])){
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="blurBox">
+    </div>
     <form method="post">
         <?php if(isset($msg)): ?><p class="error"><?=htmlspecialchars($msg)?></p><?php endif;?>
         <h1>Business SignUp</h1>
         <input class="data" type="text" name="username" placeholder="Username"></input><br>
         <?php if($usernameErr):?><p class="error"><?=$usernameErr?></p><?php endif; ?>
-        <input class="data" type="email" name="email" placeholder="Email">"></input><br>
+        <input class="data" type="email" name="email" placeholder="Email"></input><br>
         <?php if($emailErr):?><p class="error"><?=$emailErr?></p><?php endif; ?>
         <input class="data" type="password" name="password" placeholder="Password"></input><br>
         <button name="businessSignup">SignUp</button>

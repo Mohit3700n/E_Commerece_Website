@@ -45,38 +45,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' || isset($_POST['login'])) {
 </head>
 
 <body>
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-        <?php if (in_array($invalid_email, $error_msg)) {
-            echo '<p class="error_message" id="all_fields_error">' . $invalid_email . '</p>';
-        } ?>
-        <h1>Customer Login</h1>
-        <input autocomplete="off" class="data" type="email" name="email" placeholder="Email" required></input><br>
-        <input autocomplete="off" class="data" type="password" name="password" placeholder="Password"
-            required></input><br>
-        <button type="submit" name="login">Login</button>
-        <h4>Don't have an account ? <a href="customerSignUp.php">Sign Up</a></h4>
-        <span>OR</span><br>
-         <h4"><a class="businessAccount" href="businessLogin.php">Business Account</a></h4>
-    </form>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const form = document.querySelector('form');
-                const inputsFields = form.querySelectorAll('input');
-                const all_fields_error = document.getElementById('all_fields_error');
-                inputsFields.forEach(function (input) {
-                    input.addEventListener('focus', function () {
-                        if (all_fields_error) {
-                            all_fields_error.textContent = '';
-                        }
-                        const errorSpan = this.nextElementSibling;
+    <div class="blurBox">
+    </div>
+     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <?php if (in_array($invalid_email, $error_msg)) {
+                echo '<p class="error_message" id="all_fields_error">' . $invalid_email . '</p>';
+            } ?>
+            <h1>Customer Login</h1>
+            <input autocomplete="off" class="data" type="email" name="email" placeholder="Email" required></input><br>
+            <input autocomplete="off" class="data" type="password" name="password" placeholder="Password"
+                required></input><br>
+            <button type="submit" name="login">Login</button>
+            <h4>Don't have an account ? <a href="customerSignUp.php">Sign Up</a></h4>
+            <span>OR</span><br>
+            <h4"><a class="businessAccount" href="businessLogin.php">Business Account</a></h4>
+        </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            const inputsFields = form.querySelectorAll('input');
+            const all_fields_error = document.getElementById('all_fields_error');
+            inputsFields.forEach(function (input) {
+                input.addEventListener('focus', function () {
+                    if (all_fields_error) {
+                        all_fields_error.textContent = '';
+                    }
+                    const errorSpan = this.nextElementSibling;
 
-                        if (errorSpan && errorSpan.classList.contains('error_message')) {
-                            errorSpan.textContent = '';
-                        }
-                    })
+                    if (errorSpan && errorSpan.classList.contains('error_message')) {
+                        errorSpan.textContent = '';
+                    }
                 })
             })
-        </script>
+        })
+    </script>
 </body>
 
 </html>
